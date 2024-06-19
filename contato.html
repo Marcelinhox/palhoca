@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <link rel="stylesheet" href="stylescontato.css"> <!-- Link para o arquivo de estilos externo -->
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Pagina Inicial</a></li>
+            <li><a href="inicio.html">Início</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="galeria.html">Galeria</a></li>
+        </ul>
+    </nav>
+
+<h1>Entre em Contato</h1>
+
+<div class="contact-info">
+    <p>Estou à disposição para conversar. Você pode me contatar através do meu currículo ou pelas redes sociais abaixo:</p>
+
+    <!-- Links para redes sociais -->
+    <div class="social-links">
+        <a href="https://www.linkedin.com/in/marcelo-marques-de-souza-b8b0362ba/" target="_blank"><img src="linkedin.png" alt="LinkedIn"></a>
+        <a href="https://wa.me/48991614226" target="_blank"><img src="whatsapp.png" alt="Whatsapp"></a>
+        <a href="https://www.instagram.com/marcelinhox_/" target="_blank"><img src="instagram.jpg" alt="Instagram"></a>
+    </div>
+
+    <!-- Link para baixar o currículo -->
+    <a href="https://marcelinhox.github.io/naoaguentomais/index.html" target="_blank">Ver Currículo</a>
+</div>
+
+<!-- Formulário de contato -->
+<div class="contact-form">
+    <h2>Ou deixe uma mensagem:</h2>
+    <form action="#" method="post">
+        <input type="text" name="nome" placeholder="Seu nome" required>
+        <input type="email" name="email" placeholder="Seu e-mail" required>
+        <textarea name="mensagem" placeholder="Sua mensagem" rows="4" required></textarea>
+        <button type="submit">Enviar Mensagem</button>
+    </form>
+    <div id="messageSent" style="display: none; color: green; margin-top: 10px;">
+        Sua mensagem foi enviada com sucesso!
+    </div>
+</div>
+<footer>
+    <p>© 2024 Município de Palhoça. Todos os direitos reservados.</p>
+</footer>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var form = document.getElementById('contactForm');
+        var messageSent = document.getElementById('messageSent');
+    
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
+    
+            // Simulação de envio de mensagem (pode ser substituído por lógica de envio real)
+            setTimeout(function() {
+                // Exibe a mensagem de sucesso após um pequeno atraso (simulação de envio)
+                messageSent.style.display = 'block';
+            }, 1000); // Ajuste o tempo conforme necessário
+    
+            // Aqui você pode adicionar código para enviar os dados do formulário para o servidor
+            // Por exemplo, usando fetch() ou XMLHttpRequest para uma API de backend
+        });
+    });
+    </script>
+    
+
+</body>
+</html>
